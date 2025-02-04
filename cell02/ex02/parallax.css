@@ -39,3 +39,8 @@ h1 {
     height: 100vh;
     background-color: #000000;
 }
+
+.text{
+    text-align: center;
+    color: white;
+}
