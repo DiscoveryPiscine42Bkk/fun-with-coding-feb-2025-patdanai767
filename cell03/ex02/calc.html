@@ -41,6 +41,7 @@
         } else if (op == "divide") {
           if (y == 0) {
             alert("It's over 9000!");
+            console.log("It's over 9000!");
           } else {
             z = x / y;
             console.log("Answer = " + z);
@@ -49,6 +50,7 @@
         } else if (op == "mod") {
           if (y == 0) {
             alert("It's over 9000!");
+            console.log("It's over 9000!");
           } else {
             z = x % y;
             console.log("Answer = " + z);
@@ -56,6 +58,19 @@
           }
         }
       }
+
+      function timeAlert() {
+        let count = 60;
+        setInterval(() => {
+          if (count % 30 == 0) {
+            alert("Please, use me...");
+            count = 60;
+          }
+          count--;
+        }, 1000);
+      }
+      
+      timeAlert();
     </script>
   </body>
 </html>
