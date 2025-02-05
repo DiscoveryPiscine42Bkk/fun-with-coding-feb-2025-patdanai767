@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="backgroound.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <button class="changeColor">Click me!</button>
+
+    <script>
+      $(document).ready(function () {
+        $(".changeColor").on("click", function () {
+          const colors = [
+            "black",
+            "red",
+            "pink",
+            "brown",
+            "gray",
+            "yellow",
+            "purple",
+            "green",
+            "white",
+            "orange",
+          ];
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            $('body').css("background", randomColor)
+        });
+      });
+    </script>
+  </body>
+</html>
