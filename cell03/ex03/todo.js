@@ -2,25 +2,24 @@
 const list = document.getElementById("ft_list");
 
 function addList() {
-  const val = prompt("What is your name?")
-  if (val !== "" & val !== null) {
-    var li = document.createElement("p");
-    li.innerHTML = val;
-    list.appendChild(li);
-    var x = document.createElement("span");
-    x.innerHTML = "\u00d7";
-    li.appendChild(x);
-    console.log(list);
+  const val = prompt("What is your name?");
+  if ((val !== "") & (val !== null)) {
+    var li = document.createElement("li");
+    var x = document.createElement("p");
+    li.innerHTML = "";
+    x.innerHTML = val;
+    list.prepend(li);
+    li.prepend(x);
     document.cookie = `data=${list.outerHTML}`;
   }
 }
 
 list.addEventListener("click", (e) => {
-  if (e.target.tagName === "SPAN") {
+  if (e.target.tagName === "P") {
     const checked = confirm(`Are you sure to delete?`);
     if (checked) {
       e.target.parentElement.remove();
-      document.cookie = `data=${list.outerHTML}`
+      document.cookie = `data=${list.outerHTML}`;
     }
   }
 });
