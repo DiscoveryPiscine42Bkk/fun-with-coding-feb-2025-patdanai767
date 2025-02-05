@@ -24,7 +24,7 @@
         var x = parseFloat(document.getElementById("value1").value);
         var y = parseFloat(document.getElementById("value2").value);
         var op = document.getElementById("operation").value;
-        if ((x < 0) & (y < 0)) {
+        if ((x < 0) | (y < 0)) {
           alert("Error :(");
         } else if (op == "plus") {
           z = x + y;
