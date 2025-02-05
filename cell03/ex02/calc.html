@@ -59,18 +59,9 @@
         }
       }
 
-      function timeAlert() {
-        let count = 60;
-        setInterval(() => {
-          if (count % 30 == 0) {
-            alert("Please, use me...");
-            count = 60;
-          }
-          count--;
-        }, 1000);
-      }
-      
-      timeAlert();
+      setInterval(() => {
+        alert("Please, use me...");
+      }, 30000);
     </script>
   </body>
 </html>
