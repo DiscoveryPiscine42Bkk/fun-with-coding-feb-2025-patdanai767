@@ -30,12 +30,11 @@ $(document).ready(function () {
   });
 
   function showList() {
-    var list = decodeURIComponent(document.cookie.substring(5));
-    let words = list.split("|~|");
+    var words = document.cookie.substring(5).split("|~|");
     if (words[0] !== "") {
       for (let i in words) {
         if (words[i] !== "" && words[i] !== "null")
-          $("#ft_list").append(`<li class="${i}" id="list">${words[i]}</li>`);
+          $("#ft_list").append(`<li class="${i}" id="list">${decodeURIComponent(words[i])}</li>`);
       }
     }
   }
