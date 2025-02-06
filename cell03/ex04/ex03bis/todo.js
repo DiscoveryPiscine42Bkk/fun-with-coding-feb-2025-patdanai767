@@ -4,7 +4,7 @@ $(document).ready(function () {
     const val = encodeURIComponent(prompt());
     if ((val !== "null") & (val !== "") & (val !== null)) {
       if (cookies) {
-        document.cookie = `data=${val + cookies.split("data=")}`;
+        document.cookie = `data=${val + cookies.split("data=").join("|~|")}`;
         cookies = document.cookie;
         $("#ft_list").prepend(`<li id="list">${decodeURIComponent(val)}</li>`);
       } else {
@@ -20,17 +20,18 @@ $(document).ready(function () {
       const text = encodeURIComponent($(this).text());
       let data = cookies.substring(5);
       let updatedData = data
-        .split(",") // string to array
+        .split("|~|") // string to array
         .filter((item) => item !== text)
-        .join(","); //back to string
+        .join("|~|"); //back to string
       document.cookie = `data=${updatedData}`;
+      cookies = document.cookie;
       $(this).remove();
     }
   });
 
   function showList() {
     var list = decodeURIComponent(document.cookie.substring(5));
-    let words = list.split(",");
+    let words = list.split("|~|");
     if (words[0] !== "") {
       for (let i in words) {
         if (words[i] !== "" && words[i] !== "null")
