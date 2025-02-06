@@ -20,11 +20,21 @@
     <button onclick="calculator()">Try me!</button>
 
     <script>
+      function isNumeric(value) {
+        return /^-?\d+$/.test(value);
+      }
       function calculator() {
         var x = parseFloat(document.getElementById("value1").value);
         var y = parseFloat(document.getElementById("value2").value);
         var op = document.getElementById("operation").value;
-        if ((x < 0) | (y < 0)) {
+        if (
+          x < 0 ||
+          y < 0 ||
+          x != NaN ||
+          y != NaN ||
+          isNumeric(document.getElementById("value1").value) ||
+          isNumeric(document.getElementById("value2").value)
+        ) {
           alert("Error :(");
         } else if (op == "plus") {
           z = x + y;
