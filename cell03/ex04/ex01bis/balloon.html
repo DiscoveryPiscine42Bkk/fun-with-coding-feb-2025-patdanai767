@@ -33,7 +33,7 @@
         $(".balloon").on("click", function () {
           if (sizeBallon >= 200) {
             sizeBallon = sizeBallon + 10;
-            if (sizeBallon >= 420) sizeBallon = (sizeBallon % 420) + 200;
+            if (sizeBallon > 420) sizeBallon = (sizeBallon % 420) + 200;
             index++;
             if (index == 3) index = 0;
             $(".balloon").css({

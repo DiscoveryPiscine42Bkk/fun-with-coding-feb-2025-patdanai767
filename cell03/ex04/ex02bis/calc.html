@@ -21,12 +21,22 @@
 
     <script>
       $(document).ready(function () {
+        function isNumeric(value) {
+          return /^-?\d+$/.test(value);
+        }
         $("button").on("click", function () {
           let x = parseFloat($("#value1").val());
           let y = parseFloat($("#value2").val());
           let op = $("#operation").val();
 
-          if (x >= 0 && y >= 0 && x != NaN && y != NaN) {
+          if (
+            x >= 0 &&
+            y >= 0 &&
+            x != NaN &&
+            y != NaN &&
+            isNumeric($("#value1").val()) &&
+            isNumeric($("#value2").val())
+          ) {
             if (op == "plus") {
               z = x + y;
               console.log(`Answer = ${z}`);
