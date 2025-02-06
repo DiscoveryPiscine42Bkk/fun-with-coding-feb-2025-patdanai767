@@ -13,20 +13,11 @@
     <script>
       $(document).ready(function () {
         $(".changeColor").on("click", function () {
-          const colors = [
-            "black",
-            "red",
-            "pink",
-            "brown",
-            "gray",
-            "yellow",
-            "purple",
-            "green",
-            "white",
-            "orange",
-          ];
-            let randomColor = colors[Math.floor(Math.random() * colors.length)];
-            $('body').css("background", randomColor)
+          const r = Math.floor(Math.random() * 256);
+          const g = Math.floor(Math.random() * 256);
+          const b = Math.floor(Math.random() * 256);
+          let randomColor = `rgb(${r}, ${g}, ${b})`;
+          $("body").css("backgroundColor", randomColor);
         });
       });
     </script>

@@ -27,7 +27,6 @@
   <body>
     <div class="center">
       <div class="balloon"></div>
-      <center><h1 id="sizeBall"></h1></center>
     </div>
 
     <script>
@@ -40,8 +39,7 @@
           if (sizeBallon >= 200) {
             sizeBallon = sizeBallon + 10;
             if (sizeBallon >= 420) sizeBallon = (sizeBallon % 420) + 200;
-            $("#sizeBall").html(`${sizeBallon}px`);
-            if (index === 3) index = 0;
+            if (index == 3) index = 0;
             $(".balloon").css({
               width: `${sizeBallon}px`,
               height: `${sizeBallon}px`,
@@ -53,16 +51,14 @@
         $(".balloon").on("mouseout", function () {
           if (sizeBallon > 200) {
             sizeBallon = sizeBallon - 5;
-            $("#sizeBall").html(`${sizeBallon}px`);
-            if (index === 0) index = 3;
+            if (index == 0) index = 3;
             $(".balloon").css({
               width: `${sizeBallon}px`,
               height: `${sizeBallon}px`,
-              backgroundColor: `${colors[Math.floor(index--)]}`,
+              backgroundColor: `${colors[Math.floor(--index)]}`,
             });
           }
         });
-        $("#sizeBall").html(`${sizeBallon}px`);
       });
     </script>
   </body>
