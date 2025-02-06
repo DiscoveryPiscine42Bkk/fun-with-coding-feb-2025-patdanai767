@@ -22,31 +22,33 @@
     <script>
       $(document).ready(function () {
         $("button").on("click", function () {
-          var x = parseFloat($("#value1").val());
-          var y = parseFloat($("#value2").val());
-          var op = $("#operation").val();
-          if (x < 0 || y < 0) {
+
+          let x = parseFloat($("#value1").val());
+          let y = parseFloat($("#value2").val());
+          let op = $("#operation").val();
+
+          if (x < 0 || y < 0 || x == NaN || y == NaN) {
             alert("Error :(");
           } else if (op == "plus") {
             z = x + y;
-            console.log("Answer = " + z);
-            alert("Answer = " + z);
+            console.log(`Answer = ${z}`);
+            alert(`Answer = ${z}`);
           } else if (op == "minus") {
             z = x - y;
-            console.log("Answer = " + z);
-            alert("Answer = " + z);
+            console.log(`Answer = ${z}`);
+            alert(`Answer = ${z}`);
           } else if (op == "time") {
             z = x * y;
             console.log("Ans  wer = " + z);
-            alert("Answer = " + z);
+            alert(`Answer = ${z}`);
           } else if (op == "divide") {
             if (y == 0) {
               alert("It's over 9000!");
               console.log("It's over 9000!");
             } else {
               z = x / y;
-              console.log("Answer = " + z);
-              alert("Answer = " + z);
+              console.log(`Answer = ${z}`);
+              alert(`Answer = ${z}`);
             }
           } else if (op == "mod") {
             if (y == 0) {
@@ -54,8 +56,8 @@
               console.log("It's over 9000!");
             } else {
               z = x % y;
-              console.log("Answer = " + z);
-              alert("Answer = " + z);
+              console.log(`Answer = ${z}`);
+              alert(`Answer = ${z}`);
             }
           }
         });
