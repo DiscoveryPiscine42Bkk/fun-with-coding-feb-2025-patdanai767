@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Humangasaur</title>
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="hidden" />
+        <label for="menu-toggle" class="hamburger">☰</label>
+        <ul class="nav-links">
+          <li class="left"><a href="../home.html">Humangasaur</a></li>
+          <li class="right">
+            <a class="right1" href="#Contact"
+              >Contact <i class="fa-regular fa-address-book"></i
+            ></a>
+          </li>
+          <li class="right">
+            <a class="right1" href="#Cer"
+              >Certificate <i class="fa-solid fa-certificate"></i
+            ></a>
+          </li>
+          <li class="right">
+            <a class="right1" href="#Me"
+              >Discover <i class="fa-solid fa-globe"></i
+            ></a>
+          </li>
+          <li class="right">
+            <a class="right1" href="#home"
+              >Home <i class="fa-solid fa-house"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container1" id="home">
+      <h1>Welcome TO</h1>
+      <p1>Ittikorn Side!</p1>
+      <br />
+      <p2 id="run"></p2>
+      <br />
+      <br />
+      <a href="#Me"><button class="Discover">Discover Me!</button></a>
+    </div>
+    <div class="container2" id="Me">
+      <div class="container2-1">
+        <div class="box">
+          <img class="img-peem" src="./picture/peem2.jpg" alt="Me" />
+        </div>
+      </div>
+      <div class="boutme">
+        <h2>About me</h2>
+        <div class="textrec">
+          <p3
+            >สวัสดีครับ ผมชื่ออิทธิกร แป้นบางนา ชื่อเล่น ภีม อายุ 20
+            ปีตอนนี้กำลังศึกษาอยู่ที่คณะวิศวกรรมศาสตร์ในอนาคตผมอยากเป็นวิศวกรที่สามารถสร้างสรรค์นวัตกรรมใหม่ๆเพื่อช่วยพัฒนาสังคมและประเทศชาติ
+            ยินดีที่ได้รู้จักทุกคนครับ!</p3
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container3" id="Cer">
+      <div class="container3-1">
+        <div class="contain3-text"><h4>Certificate</h4></div>
+        <div class="contain3-content">
+          <div class="box1">
+            <img src="./picture/cer.jpg" alt="certi1" class="piccer" />
+            <div class="boxtext">
+              <h5>RED TEAM & BLUE TEAM PARTICIPANT</h5>
+              <p5>21-22 DECEMBER 2024</p5>
+            </div>
+          </div>
+          <div class="box1">
+            <img src="./picture/cer.jpg" alt="certi1" class="piccer" />
+            <div class="boxtext">
+              <h5>RED TEAM & BLUE TEAM PARTICIPANT</h5>
+              <p5>21-22 DECEMBER 2024</p5>
+            </div>
+          </div>
+          <div class="box1">
+            <img src="./picture/cer.jpg" alt="certi1" class="piccer" />
+            <div class="boxtext">
+              <h5>RED TEAM & BLUE TEAM PARTICIPANT</h5>
+              <p5>21-22 DECEMBER 2024</p5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container4" id="Contact">
+        <div class="contact-text"><h6>Contact :</h6></div>
+        <div class="social-icon">
+          <a href="https://www.facebook.com/daeo.gawa" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/peem_misus" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://line.me/ti/p/I490wXYDdu" target="_blank">
+            <i class="fa-brands fa-line"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@ittikornpanbangna4570"
+            target="_blank"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://github.com/peemisus" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <div>
+            <i2 class="conclusion">©ipanbang2025</i2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var i = 0;
+      var x = 0;
+      var txt = "Comfortable Calm And Kind.";
+      var speed = 50;
+
+      async function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("run").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+    </script>
+  </body>
+</html>
